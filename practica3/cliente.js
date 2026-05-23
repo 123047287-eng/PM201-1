@@ -1,4 +1,5 @@
 const prompt = require("prompt-sync")();
+const cocina = require("./cocina");
 
 
 let productos = cocina.productos;

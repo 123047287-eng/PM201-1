@@ -33,6 +33,7 @@ let productos = [
 ];
 
 let opcion = 0;
+if(require.main === module){
 
 while (opcion !== 7) {
     console.log("----------COCINA------------");
@@ -138,7 +139,7 @@ break;
     case 7: console.log("Saliendo...."); break;
     default: console.log("Solo opciones válidas");
     }
-}
+}}
 
 function promociones(){
     let promociones = [
