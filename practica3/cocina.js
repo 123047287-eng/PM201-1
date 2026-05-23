@@ -166,3 +166,6 @@ function promociones(){
 
     return promociones;
 }
+module.exports = {
+    productos
+};
