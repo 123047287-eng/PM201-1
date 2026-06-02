@@ -47,7 +47,7 @@ let productos = [
 ];
 function menuCocina(){
 let opcion;
-if(require.main === module){
+
     while (opcion !== 0) {
     console.log("----------COCINA------------");
     console.log("1. Agregar");
@@ -148,11 +148,11 @@ if(require.main === module){
             console.log("Cerrando...");
             break;
             default:
-            console.log("Opción inválida");
+    console.log("Opción inválida");
        
     }
-}}
-}
+}}  
+
 
 
 function prepararCafe(){
@@ -188,7 +188,7 @@ function prepararAlimento(){
         }, 3000);
     });
 }
-function promociones(){
+        function promociones(){ 
     let promos = [
         {nombre:"Cafe 2x1",descripcion:"En la compra de un cafe grande, llevate el segundo gratis", vigencia:"2026-05-21",disponible:true},
         {nombre:"Martes de Expresso", descripcion:"2 expressos por $90",vigencia:"2026-07-10",disponible:true},

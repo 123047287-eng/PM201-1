@@ -2,40 +2,25 @@ const prompt = require("prompt-sync")();
 
 let productos = [
     {nombre:"expresso",categoria:"bebida",ingredientes:"Leche entera con café de grano molido veracruzano",precio:55},
-
     {nombre:"Oatmealcookie",categoria:"postre",ingredientes:"Galleta hecha con miel y arandanos 3pz", precio:40},
-
     {nombre:"Tea Green",categoria:"bebida", ingredientes:"Té verde caliente endulzado con miel",precio:55},
-
     {nombre:"Cheese Salad Sándwich",categoria:"entrada", ingredientes:"Pan de centeno relleno de queso blanco y chedar junto con aderezo especial de la casa con agucate y lechuga", precio:55},
-
     {nombre:"Chocolate Cupcake",categoria:"postre",ingredientes:"Pan de chocolate especial de la casa con arandanos y nuez",precio:35},
-
     {nombre:"Expresso Doble",categoria:"bebida",ingredientes:"Café veracruzano intenso",precio:55},
-
     {nombre:"Cheesecake",categoria:"postre",ingredientes:"Queso crema, vainilla",precio:40},
-
     {nombre:"Pay de Limón",categoria:"postre",ingredientes:"Limón, galleta, leche condensada",precio:60},
-
     {nombre:"Papas Gajo",categoria:"snack",ingredientes:"Papa sazonada, especias",precio:45},
-
     {nombre:"Nachos con Queso",categoria:"snack",ingredientes:"Totopos, queso cheddar",precio:65},
-
     {nombre:"Dedos de Queso",categoria:"snack",ingredientes:"Queso mozzarella empanizado",precio:75},
-
     {nombre:"Panini Jamón y Queso",categoria:"entrada",ingredientes:"Jamón, queso manchego",precio:75},
-
     {nombre:"Milkshake Oreo",categoria:"bebida",ingredientes:"Helado, Oreo, crema",precio:110},
-
     {nombre:"Club Sandwich",categoria:"plato fuerte",ingredientes:"Pollo, jamón, tocino",precio:145},
-
     {nombre:"Hamburguesa Gourmet",categoria:"plato fuerte",ingredientes:"Doble carne, queso suizo",precio:190}
 ];
 
 let opcion = 0;
 if(require.main === module){
-
-while (opcion !== 7) {
+    while (opcion !== 7) {
     console.log("----------COCINA------------");
     console.log("1. Agregar");
     console.log("2. Listar");
@@ -48,41 +33,34 @@ while (opcion !== 7) {
     opcion = parseInt(prompt("Elige una opción:"));
     switch (opcion) {
         case 1:
-
-  let ProductoNuevo = {
- nombre: prompt("Nombre:"),
- categoria: prompt("Categoria:"),
-ingredientes: prompt("Ingredientes:"),
- precio: parseInt(prompt("Precio:"))
+            let ProductoNuevo = {
+                nombre: prompt("Nombre:"),
+                categoria: prompt("Categoria:"),
+                ingredientes: prompt("Ingredientes:"),
+                precio: parseInt(prompt("Precio:"))
             };
 
             productos.push(ProductoNuevo);
-
             console.log("Producto agregado...");
-
-            productos.forEach(producto => {
-
-                console.log(`
-Nombre: ${producto.nombre}
-Categoria: ${producto.categoria}
-Ingredientes: ${producto.ingredientes.slice(0,40)}...
-Precio: $${producto.precio}
-========================
-`);
-
-            });
-
+            productos.forEach(producto => {console.log(`
+                Nombre: ${producto.nombre}
+                Categoria: ${producto.categoria}
+                Ingredientes: ${producto.ingredientes.slice(0,40)}...
+                Precio: $${producto.precio}
+                ========================`); });
         break;
-
         case 2:
-
             productos.forEach(producto => {
-
                 console.log(`
-Nombre: ${producto.nombre}
-Categoria: ${producto.categoria}
-Ingredientes: ${producto.ingredientes.slice(0,40)}...
-Precio: $${producto.precio}
+                    Nombre: ${producto.nombre}
+                    Categoria: ${producto.categoria}
+                    Ingredientes: ${producto.ingredientes.slice(0,40)}...
+                    Precio: $${producto.precio}
+                
+
+
+
+
 ========================
 `);
 
@@ -168,5 +146,6 @@ function promociones(){
     return promociones;
 }
 module.exports = {
-    productos
+    productos,
+    promociones
 };
