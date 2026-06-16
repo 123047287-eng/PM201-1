@@ -14,8 +14,11 @@ export default function App() {
 
 
     <View style={styles.container}>
-      <Image source={require('./assets/wave.png')}/>
-      <Perfil></Perfil>
+      <Perfil style = {styles. tarjetaRojo} nombre="Karen" carrea="Ing" materia = "Movil" cuatri="9"></Perfil>
+      <Perfil style = {styles.tarjetaRosa} nombre="Daira" carrea="Ing" materia = "Movil" cuatri="9"></Perfil>
+      <Perfil style = {styles.tarjetaRosa} nombre="Isabel" carrea="Ing" materia = "Movil" cuatri="9"></Perfil>
+      {/* <Image source={require('./assets/wave.png')}/>
+      <Perfil></Perfil> */}
 
       {/* <Text>Hola Mundo React Native</Text>
       <Text>-----------------------------------------------------</Text>
@@ -39,5 +42,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection:'row',
+     justifyContent:'space-around' 
   },
+  tarjetaRojo:{backgroundColor:'green',},
+  tarjetaRosa:{backgroundColor:'pink',},
 });
