@@ -1,7 +1,6 @@
 /* zona 1: lugar donde estan las importaiones de archivos y componentes */
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import MenuScreen from './Screens/MenuScreen';
 
 
 
@@ -10,7 +9,9 @@ zona 2: Main - Componentes del screen */
 
 export default function App() {
   return (
-    <MenuScreen></MenuScreen>
+    <View>
+        <Text>Aquí va la primer práctica de componentes nativos</Text>
+    </View>
 
   );
 }
@@ -24,8 +25,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:'row',
-     justifyContent:'space-around' 
+    justifyContent:'space-around' 
   },
-  tarjetaRojo:{backgroundColor:'green',},
-  tarjetaRosa:{backgroundColor:'pink',},
 });
