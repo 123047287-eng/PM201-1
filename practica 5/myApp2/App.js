@@ -3,6 +3,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import MenuScreen from './Screens/MenuScreen';
 import PracticaScrollView from './Screens/PracticaScrollView';
+import PressableScreen from './Screens/PreassableScreen';
+import SwitchScreen from './Screens/SwitchScreen2';
 
 
 
@@ -11,10 +13,9 @@ zona 2: Main - Componentes del screen */
 
 export default function App() {
   return (
-    // <MenuScreen></MenuScreen>
-    <PracticaScrollView></PracticaScrollView>
-
-
+     
+    <MenuScreen></MenuScreen>
+   
   );
 }
 
