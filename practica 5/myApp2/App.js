@@ -1,5 +1,6 @@
 /* zona 1: lugar donde estan las importaiones de archivos y componentes */
 import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import MenuScreen from './Screens/MenuScreen';
 import PracticaScrollView from './Screens/PracticaScrollView';
@@ -13,8 +14,13 @@ zona 2: Main - Componentes del screen */
 
 export default function App() {
   return (
-     
+    <SafeAreaProvider>
+     <View style={styles.container}>
     <MenuScreen></MenuScreen>
+    <StatusBar style="auto" />
+    
+    </View>
+    </SafeAreaProvider>
    
   );
 }
