@@ -9,6 +9,8 @@ import SwitchScreen from './SwitchScreen2';
 import PreassableScreen from './PreassableScreen';
 import Componente4_0 from './Componente4_0';
 import ComponenteAlert from './ComponenteAlert';
+import FlatListScreen from './FlatListScreen';
+import SectionListScreen from './SectionListScreen';
 
 /* zona 2: Main - Componentes del screen */
 export default function App() {
@@ -29,6 +31,10 @@ export default function App() {
       return <Componente4_0></Componente4_0>;
     case 'Alert':
       return <ComponenteAlert></ComponenteAlert>;
+    case 'Flat':
+      return <FlatListScreen></FlatListScreen>;
+    case 'Section':
+      return <SectionListScreen></SectionListScreen>;
 
     case 'menu':
       return (
@@ -41,6 +47,10 @@ export default function App() {
           <Button title="pressable" onPress={() => setScreen('preassable')}></Button>
           <Button title="Componente TextInput" onPress={() => setScreen('TextInput')}></Button>
           <Button title="Componente Alert" onPress={() => setScreen('Alert')}></Button>
+          <Button title="FlatList" onPress={() => setScreen('Flat')}></Button>
+          <Button title="SectionList" onPress={() => setScreen('Section')}></Button>
+
+
           <StatusBar style="auto" />
         </View>
       );

@@ -6,8 +6,8 @@ import MenuScreen from './Screens/MenuScreen';
 import PracticaScrollView from './Screens/PracticaScrollView';
 import PressableScreen from './Screens/PreassableScreen';
 import SwitchScreen from './Screens/SwitchScreen2';
-
-
+import SectionListScreen from './Screens/SectionListScreen';
+import FlatListScreen from './Screens/FlatListScreen';
 
 /* 
 zona 2: Main - Componentes del screen */
@@ -16,7 +16,9 @@ export default function App() {
   return (
     <SafeAreaProvider>
      <View style={styles.container}>
-    <MenuScreen></MenuScreen>
+     <MenuScreen></MenuScreen>  
+   
+   
     <StatusBar style="auto" />
     
     </View>
