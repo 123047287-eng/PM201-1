@@ -1,7 +1,7 @@
 /* zona 1: lugar donde estan las importaiones de archivos y componentes */
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TarjetasScreen from './TarjetasScreen';
 import Componente1 from './Componente1';
 import PracticaSwitch from './PracticaSwitch';
@@ -11,10 +11,27 @@ import Componente4_0 from './Componente4_0';
 import ComponenteAlert from './ComponenteAlert';
 import FlatListScreen from './FlatListScreen';
 import SectionListScreen from './SectionListScreen';
+import {ImagenFondo} from './ImagenFondo';
+import { SplashScreen } from './SplashScreen';
+import { Home } from './Home';
 
 /* zona 2: Main - Componentes del screen */
 export default function App() {
   const [screen, setScreen] = useState('menu');
+
+  useEffect(()=> {
+    let timer; 
+
+  if (screen === 'splashScreen') {
+    timer = setTimeout(() => { 
+      setScreen('home');
+    }, 6000);
+  }
+
+  return () => {
+    if (timer) clearTimeout(timer); 
+  };
+}, [screen]);
 
   switch (screen) {
     case 'tarjetas':
@@ -33,8 +50,13 @@ export default function App() {
       return <ComponenteAlert></ComponenteAlert>;
     case 'Flat':
       return <FlatListScreen></FlatListScreen>;
-    case 'Section':
-      return <SectionListScreen></SectionListScreen>;
+    case 'home':
+      return <Home></Home>
+    case 'ImagenFondo':
+      return <ImagenFondo style={styles.container}></ImagenFondo>
+    case 'splashScreen':
+      return <SplashScreen></SplashScreen>
+      
 
     case 'menu':
       return (
@@ -49,7 +71,8 @@ export default function App() {
           <Button title="Componente Alert" onPress={() => setScreen('Alert')}></Button>
           <Button title="FlatList" onPress={() => setScreen('Flat')}></Button>
           <Button title="SectionList" onPress={() => setScreen('Section')}></Button>
-
+        <Button title="Imagen Fondo" onPress={() => setScreen('ImagenFondo')}></Button>
+          <Button title="Splash Screen" onPress={() => setScreen('splashScreen')}></Button>
 
           <StatusBar style="auto" />
         </View>
