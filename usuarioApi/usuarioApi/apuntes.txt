@@ -1,0 +1,23 @@
+Expo router: herramientas que simplica la navegacio , donde las rutas
+se generan automaticamente a partir de estructura de carpetas.
+
+Esas rutas se crean en una carpeta https://reactnavigation.org/
+Tipos de navegacion: 
+- Stack
+- Tabs
+- Drawer
+- Botton Tabs
+ Ventajas de nagegacion expo router
+ - Organizacion basada en archivos.
+ - Navegacion sencilla
+ - Compatible con Stack, Tabs y Drawer
+ - Facil de escalar
+ - Reduce la cantida de codigo
+
+ en lauout definos la navegacion por default
+ y en tabs definimos otra navegacion encima por la default
+
+
+
+ comando para ejecutar la libreria de los iconos: npx expo install @expo/vector-icons
+ 
