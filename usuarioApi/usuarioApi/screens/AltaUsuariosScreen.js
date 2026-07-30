@@ -21,11 +21,11 @@ export default function App() {
   }
   try{
     setCargando(true);
-    const respuesta = await fetch('http://localhost:5000/v1/usuarios/',
+    const respuesta = await fetch('http://192.168.100.126:5000/v1/usuarios/',
       {
         method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body: JSON.stringify({nombre:nombre,edad:edad}),
+        headers:{"Content-Type":"application/json"},  
+        body: JSON.stringify({nombre:nombre,edad: parseInt(edad, 10)}),
       }
     );
     const datos = await respuesta.json();

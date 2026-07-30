@@ -6,7 +6,7 @@ export default function TabsLayout() {
   return (
     <Tabs>
       <Tabs.Screen 
-        name='Alta'
+        name='alta'
         options={{
           title: 'Alta', 
           tabBarIcon: ({ size }) => (
@@ -16,7 +16,7 @@ export default function TabsLayout() {
       />
 
       <Tabs.Screen 
-        name='Consulta'
+        name='consulta'
         options={{
           title: 'Consulta',
           tabBarIcon: ({ size }) => (
