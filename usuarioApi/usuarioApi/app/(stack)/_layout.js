@@ -18,7 +18,6 @@ export default function StackLayout() {
         name="detalles" 
         options={{ 
           title: 'Detalle del usuario',
-          // Dibujamos la píldora exacta "< (tabs)" en la esquina superior izquierda
           headerLeft: () => (
             <Pressable 
               style={styles.backButton} 
