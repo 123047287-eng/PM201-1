@@ -1,32 +1,59 @@
 {
   "expo": {
-    "name": "repa2",
+    "name": "Dai Dai",
     "slug": "repa2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/splash-icon.png",
+    "icon": "./assets/icon1.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash-icon1.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
+      "package": "com.dairasteam.miUsuarioAPI",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
     },
+
     "web": {
       "favicon": "./assets/favicon.png"
     },
+
     "plugins": [
-      "expo-router"
-    ]
+      "expo-router",
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+
+    "androidStatusBar": {
+      "backgroundColor": "#ffffff",
+      "barStyle": "dark-content"
+    },
+
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "4b81ff13-d59a-4c5d-969e-95ac83c544cf"
+      }
+    }
   }
 }

@@ -39,7 +39,7 @@ export default function App() {
     return (
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
-          source={require('./assets/fondo.jpg')}
+          source={require('./assets/fond')}
           style={{
             flex: 1,
             justifyContent: 'center',

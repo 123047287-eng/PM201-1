@@ -10,7 +10,7 @@ export default function ConsultaUsuariosScreen() {
 
   const obtenerUsuarios = async()=>{
     try{
-      const respuesta = await fetch('http://192.168.100.126:5000/v1/usuarios/');
+      const respuesta = await fetch('http://10.193.236.103:5000/v1/usuarios/');
       const datos =await respuesta.json();
       console.log('Respuesta API', datos);
       setUsuarios(datos.usuarios);
@@ -56,7 +56,7 @@ export default function ConsultaUsuariosScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.titulo}>
-        Lista de Usuarios
+        Lista de Usuarios de DAIRA
       </Text>
       <FlatList
         data={usuarios}

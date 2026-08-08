@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Pressable, Modal, StyleSheet, Alert, Platform } from 'react-native';
 import { useLocalSearchParams, useRouter,Stack } from 'expo-router';
+import { encode } from 'base-64';
 
 export default function DetallesUsuarioScreen() {
   const params = useLocalSearchParams();
@@ -26,9 +27,9 @@ export default function DetallesUsuarioScreen() {
     setCargando(true);
 
     try {
-      const credencialesBase64 = btoa('admin:1234');
+      const credencialesBase64 = encode('admin:1234');
       
-      const respuesta = await fetch(`http://192.168.100.126:5000/v1/usuarios/${params.id}`, {
+      const respuesta = await fetch(`http://10.193.236.103:5000/v1/usuarios/${params.id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

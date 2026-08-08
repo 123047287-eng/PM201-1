@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, StyleSheet, Alert, Platform } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { encode } from 'base-64';
 
 export default function EditarUsuarioScreen() {
   const params = useLocalSearchParams();
@@ -28,8 +29,8 @@ export default function EditarUsuarioScreen() {
     }
 
     try {
-      const credencialesBase64 = btoa("admin:1234");
-      const respuesta = await fetch(`http://192.168.100.126:5000/v1/usuarios/${params.id}`, {
+      const credencialesBase64 = encode("admin:1234");
+      const respuesta = await fetch(`http://10.193.236.103:5000/v1/usuarios/${params.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
